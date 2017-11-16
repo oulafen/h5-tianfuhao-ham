@@ -1,0 +1,713 @@
+@font-face {
+  font-family: 'SansGBW3573194';
+  src: url("../font/SansGBW3.eot");
+  src: url("../font/SansGBW3.eot?#iefix") format("embedded-opentype"), url("../font/SansGBW3.woff") format("woff"), url("../font/SansGBW3.ttf") format("truetype"), url("../font/SansGBW3.svg#SansGBW3") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  padding: 0;
+  margin: 0; }
+
+p {
+  font-family: 'SansGBW3573194'; }
+
+a, a:hover {
+  text-decoration: none; }
+
+.pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/bg.jpg) no-repeat center center;
+  background-size: cover; }
+
+.scale-box {
+  transform: scale(1);
+  width: 400px;
+  height: 570px;
+  left: 50%;
+  position: absolute;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -285px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden; }
+  .page .btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.3); }
+    .page .btn span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff; }
+  .page .animated {
+    visibility: visible !important; }
+  .page .shining {
+    -webkit-animation: flash 2s infinite;
+    -moz-animation: flash 2s infinite;
+    -o-animation: flash 2s infinite;
+    animation: flash 2s infinite; }
+  .page .next-btn {
+    position: absolute;
+    bottom: -30px;
+    background: url("../images/arrow-down.png") no-repeat center center;
+    background-size: contain;
+    height: 20px;
+    width: 400px;
+    left: 0; }
+
+.current-show {
+  visibility: visible; }
+
+.animated {
+  visibility: visible;
+  transition-duration: 1.5s;
+  -webkit-animation-duration: 1.5s; }
+
+.page-1 .img-box {
+  margin: 0 0 2rem 0;
+  text-align: center; }
+  .page-1 .img-box img {
+    width: 7rem; }
+.page-1 .text-box {
+  text-align: center; }
+  .page-1 .text-box .text {
+    width: 2.3rem;
+    height: 21rem;
+    display: inline-block;
+    margin: 0 .7rem; }
+  .page-1 .text-box .text-1 {
+    background: url("../images/font-1-1.png") no-repeat center center;
+    background-size: contain;
+    visibility: hidden; }
+  .page-1 .text-box .text-2 {
+    background: url("../images/font-1-2.png") no-repeat center center;
+    background-size: contain;
+    visibility: hidden; }
+  .page-1 .text-box:before {
+    content: '';
+    position: absolute;
+    background: url("../images/cloud-left.png") no-repeat center center;
+    background-size: contain;
+    width: 7rem;
+    height: 4rem;
+    left: .5rem;
+    margin-top: 1rem;
+    -webkit-animation: cloudMove1 3s infinite;
+    -moz-animation: cloudMove1 3s infinite;
+    -o-animation: cloudMove1 3s infinite;
+    animation: cloudMove1 3s infinite; }
+  .page-1 .text-box:after {
+    content: '';
+    position: absolute;
+    background: url("../images/cloud-right.png") no-repeat center center;
+    background-size: contain;
+    width: 8rem;
+    height: 4rem;
+    right: .5rem;
+    margin-top: 18rem;
+    -webkit-animation: cloudMove2 3s infinite 1s;
+    -moz-animation: cloudMove2 3s infinite 1s;
+    -o-animation: cloudMove2 3s infinite 1s;
+    animation: cloudMove2 3s infinite 1s; }
+.page-1 .waiting {
+  text-align: center;
+  margin-top: 3rem;
+  /* Set the sizes of the elements that make up the progress bar */ }
+  .page-1 .waiting .waiting-font {
+    background: url("../images/font-1-wait.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    width: 2.3rem;
+    height: 2.3rem; }
+  .page-1 .waiting .wrapper {
+    width: 100px;
+    /* Set the size of the progress bar */
+    height: 100px;
+    position: absolute;
+    /* Enable clipping */
+    clip: rect(0px, 100px, 100px, 50px);
+    /* Hide half of the progress bar */
+    margin-top: -63px;
+    left: 50%;
+    margin-left: -40px; }
+  .page-1 .waiting .circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    position: absolute;
+    clip: rect(0px, 50px, 100px, 0px); }
+
+.page-2 .scale-box {
+  padding: 80px 30px; }
+.page-2 .text-1, .page-2 .text-2, .page-2 .text-3, .page-2 .text-4, .page-2 .text-5, .page-2 .text-6, .page-2 .text-7, .page-2 .text-8, .page-2 .text-9, .page-2 .text-10, .page-2 .text-11, .page-2 .text-12, .page-2 .text-13, .page-2 .text-14, .page-2 .huotui-small, .page-2 .btn {
+  visibility: hidden; }
+.page-2 .text-left {
+  width: 80px;
+  float: left;
+  text-align: center; }
+  .page-2 .text-left .text-1 {
+    display: inline-block;
+    width: 1.5rem;
+    height: 25.5rem;
+    background: url("../images/font-2-1.png") no-repeat center center;
+    background-size: contain; }
+  .page-2 .text-left:before {
+    content: '';
+    background: url("../images/huotui-slice-left.png") no-repeat center center;
+    background-size: contain;
+    width: 2rem;
+    height: 3rem;
+    position: absolute;
+    margin: 9rem 0 0 -2.4rem; }
+  .page-2 .text-left:after {
+    content: '';
+    background: url("../images/huotui-slice-right.png") no-repeat center center;
+    background-size: contain;
+    width: 2rem;
+    height: 3rem;
+    position: absolute;
+    margin: 4rem .4rem 0; }
+.page-2 .text-right {
+  width: 260px;
+  float: left; }
+  .page-2 .text-right .top-box {
+    width: 200px;
+    margin: 0 auto; }
+    .page-2 .text-right .top-box .text-2, .page-2 .text-right .top-box .text-3 {
+      height: 1rem;
+      width: 100%; }
+    .page-2 .text-right .top-box .text-2 {
+      background: url("../images/font-2-2.png") no-repeat center center;
+      background-size: contain; }
+    .page-2 .text-right .top-box .text-middle {
+      text-align: center; }
+      .page-2 .text-right .top-box .text-middle .text-4, .page-2 .text-right .top-box .text-middle .text-5 {
+        height: 2.4rem;
+        width: 2.4rem;
+        display: inline-block;
+        margin: .2rem 0; }
+      .page-2 .text-right .top-box .text-middle .text-4 {
+        background: url("../images/font-2-4.png") no-repeat center center;
+        background-size: contain; }
+      .page-2 .text-right .top-box .text-middle .text-5 {
+        background: url("../images/font-2-5.png") no-repeat center center;
+        background-size: contain; }
+      .page-2 .text-right .top-box .text-middle .text-6 {
+        background: url("../images/font-2-6.png") no-repeat center center;
+        background-size: contain;
+        height: 2.4rem;
+        width: 6rem;
+        margin: .2rem .2rem;
+        display: inline-block; }
+    .page-2 .text-right .top-box .text-3 {
+      background: url("../images/font-2-3.png") no-repeat center center;
+      background-size: contain; }
+  .page-2 .text-right .middle-box {
+    margin-top: 2rem;
+    text-align: center; }
+    .page-2 .text-right .middle-box .text-7, .page-2 .text-right .middle-box .text-8 {
+      height: 1rem;
+      width: 250px;
+      display: inline-block; }
+    .page-2 .text-right .middle-box .text-7 {
+      background: url("../images/font-2-7.png") no-repeat center center;
+      background-size: contain; }
+    .page-2 .text-right .middle-box .text-8 {
+      background: url("../images/font-2-8.png") no-repeat center center;
+      background-size: contain; }
+    .page-2 .text-right .middle-box .text-middle {
+      text-align: center; }
+      .page-2 .text-right .middle-box .text-middle .text-9, .page-2 .text-right .middle-box .text-middle .text-10, .page-2 .text-right .middle-box .text-middle .text-11, .page-2 .text-right .middle-box .text-middle .text-12 {
+        height: 2.4rem;
+        width: 2.4rem;
+        display: inline-block;
+        margin: .4rem .8rem; }
+      .page-2 .text-right .middle-box .text-middle .text-9 {
+        background: url("../images/font-2-9.png") no-repeat center center;
+        background-size: contain;
+        margin-left: 0; }
+      .page-2 .text-right .middle-box .text-middle .text-10 {
+        background: url("../images/font-2-10.png") no-repeat center center;
+        background-size: contain; }
+      .page-2 .text-right .middle-box .text-middle .text-11 {
+        background: url("../images/font-2-11.png") no-repeat center center;
+        background-size: contain; }
+      .page-2 .text-right .middle-box .text-middle .text-12 {
+        background: url("../images/font-2-12.png") no-repeat center center;
+        background-size: contain;
+        margin-right: 0; }
+  .page-2 .text-right .bottom-box {
+    margin: 2rem auto 0;
+    width: 200px;
+    text-align: center; }
+    .page-2 .text-right .bottom-box .text-13, .page-2 .text-right .bottom-box .text-14, .page-2 .text-right .bottom-box .huotui-small {
+      display: inline-block; }
+    .page-2 .text-right .bottom-box .text-13 {
+      background: url("../images/font-2-13.png") no-repeat center center;
+      background-size: contain;
+      height: 1.2rem;
+      width: 12.3rem; }
+    .page-2 .text-right .bottom-box .text-14 {
+      background: url("../images/font-2-14.png") no-repeat center center;
+      background-size: contain;
+      width: 12.3rem;
+      height: 150px; }
+    .page-2 .text-right .bottom-box .huotui-small {
+      background: url("../images/huotui-small.png") no-repeat center center;
+      background-size: contain;
+      width: 12.3rem;
+      height: 160px;
+      margin-top: -150px;
+      margin-right: 10px;
+      float: right; }
+    .page-2 .text-right .bottom-box .btn {
+      float: right;
+      margin: -120px 55px 0 0; }
+
+.page-3, .page-5, .page-7, .page-9 {
+  text-align: center; }
+  .page-3 .scale-box, .page-5 .scale-box, .page-7 .scale-box, .page-9 .scale-box {
+    padding: 0 30px 60px 30px; }
+  .page-3 .text-1, .page-5 .text-1, .page-7 .text-1, .page-9 .text-1 {
+    background: url("../images/font-3-1.png") no-repeat center center;
+    background-size: contain;
+    width: 11rem;
+    height: 4.5rem;
+    display: inline-block; }
+  .page-3 .huotui-box, .page-5 .huotui-box, .page-7 .huotui-box, .page-9 .huotui-box {
+    width: 340px;
+    height: 380px;
+    margin-top: 4rem;
+    position: absolute; }
+  .page-3 .text-2, .page-3 .text-3, .page-3 .text-4, .page-5 .text-2, .page-5 .text-3, .page-5 .text-4, .page-7 .text-2, .page-7 .text-3, .page-7 .text-4, .page-9 .text-2, .page-9 .text-3, .page-9 .text-4 {
+    height: 2rem;
+    width: 7rem;
+    position: absolute; }
+  .page-3 .text-2, .page-5 .text-2, .page-7 .text-2, .page-9 .text-2 {
+    background: url("../images/font-3-2.png") no-repeat center center;
+    background-size: contain;
+    top: -5px;
+    left: 130px; }
+  .page-3 .text-3, .page-5 .text-3, .page-7 .text-3, .page-9 .text-3 {
+    background: url("../images/font-3-3.png") no-repeat center center;
+    background-size: contain;
+    top: 100px;
+    left: 30px; }
+  .page-3 .text-4, .page-5 .text-4, .page-7 .text-4, .page-9 .text-4 {
+    background: url("../images/font-3-4.png") no-repeat center center;
+    background-size: contain;
+    top: 290px;
+    left: 190px; }
+  .page-3 .btn-1, .page-3 .btn-2, .page-3 .btn-3, .page-5 .btn-1, .page-5 .btn-2, .page-5 .btn-3, .page-7 .btn-1, .page-7 .btn-2, .page-7 .btn-3, .page-9 .btn-1, .page-9 .btn-2, .page-9 .btn-3 {
+    position: absolute; }
+  .page-3 .btn-1, .page-5 .btn-1, .page-7 .btn-1, .page-9 .btn-1 {
+    top: 10px;
+    left: 252px; }
+  .page-3 .btn-2, .page-5 .btn-2, .page-7 .btn-2, .page-9 .btn-2 {
+    top: 135px;
+    left: 130px; }
+  .page-3 .btn-3, .page-5 .btn-3, .page-7 .btn-3, .page-9 .btn-3 {
+    top: 295px;
+    left: 148px; }
+
+.page-3 .huotui-box {
+  background: url("../images/huotui-big-ellipse.png") no-repeat center center;
+  background-size: contain;
+  width: 340px; }
+
+.page-5 .huotui-box {
+  background: url("../images/huotui-big-1.png") no-repeat center center;
+  background-size: contain;
+  width: 376px; }
+
+.page-7 .huotui-box {
+  background: url("../images/huotui-big-2.png") no-repeat center center;
+  background-size: contain;
+  width: 385px; }
+
+.page-9 .huotui-box {
+  background: url("../images/huotui-big-3.png") no-repeat center center;
+  background-size: contain;
+  width: 385px; }
+
+.page-4, .page-6, .page-8 {
+  background: #000; }
+  .page-4 .scale-box, .page-6 .scale-box, .page-8 .scale-box {
+    padding: 0 45px; }
+    .page-4 .scale-box .desc-box, .page-6 .scale-box .desc-box, .page-8 .scale-box .desc-box {
+      overflow-y: scroll;
+      height: 100%; }
+      .page-4 .scale-box .desc-box img, .page-6 .scale-box .desc-box img, .page-8 .scale-box .desc-box img {
+        width: 100%;
+        margin: 1rem 0; }
+        .page-4 .scale-box .desc-box img:first-child, .page-6 .scale-box .desc-box img:first-child, .page-8 .scale-box .desc-box img:first-child {
+          margin-top: 0; }
+        .page-4 .scale-box .desc-box img:last-child, .page-6 .scale-box .desc-box img:last-child, .page-8 .scale-box .desc-box img:last-child {
+          margin-bottom: 0; }
+      .page-4 .scale-box .desc-box p, .page-6 .scale-box .desc-box p, .page-8 .scale-box .desc-box p {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+        text-align: justify; }
+    .page-4 .scale-box .arrow, .page-6 .scale-box .arrow, .page-8 .scale-box .arrow {
+      background: url("../images/arrow-right.png") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      width: 1.2rem;
+      height: 4rem;
+      top: 50%;
+      margin-top: -1rem;
+      right: 5%; }
+
+.page-10 .scale-box {
+  text-align: center; }
+  .page-10 .scale-box .text-1 {
+    background: url("../images/font-4-1.png") no-repeat center center;
+    background-size: contain;
+    width: 300px;
+    height: 6rem;
+    display: inline-block; }
+  .page-10 .scale-box img {
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #666;
+    width: 230px;
+    margin-top: 20px; }
+  .page-10 .scale-box .text-2, .page-10 .scale-box .text-3, .page-10 .scale-box .text-4, .page-10 .scale-box .text-5 {
+    display: inline-block; }
+  .page-10 .scale-box .desc-box {
+    margin: 20px 0;
+    text-align: center; }
+    .page-10 .scale-box .desc-box .text-2 {
+      background: url("../images/font-4-2.png") no-repeat center center;
+      background-size: contain;
+      width: 100%;
+      height: 36px;
+      margin-bottom: 10px; }
+    .page-10 .scale-box .desc-box .text-3 {
+      background: url("../images/font-4-3.png") no-repeat center center;
+      background-size: contain;
+      width: 100%;
+      height: 56px; }
+  .page-10 .scale-box .btn-box a {
+    border-radius: 13px;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    display: inline-block;
+    margin: 10px; }
+  .page-10 .scale-box .btn-box .text-4, .page-10 .scale-box .btn-box .text-5 {
+    width: 110px;
+    height: 18px; }
+  .page-10 .scale-box .btn-box .text-4 {
+    background: url("../images/font-4-share.png") no-repeat center center;
+    background-size: contain; }
+  .page-10 .scale-box .btn-box .text-5 {
+    background: url("../images/font-4-buy.png") no-repeat center center;
+    background-size: contain; }
+.page-10 .share-box {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .page-10 .share-box .arrow {
+    background: url("../images/font-5-arrow.png") no-repeat center center;
+    background-size: contain;
+    width: 26%;
+    right: 10%;
+    top: 10%;
+    height: 30%;
+    position: absolute; }
+  .page-10 .share-box .text {
+    background: url("../images/font-5-1.png") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 230px; }
+
+.page-11 .rotary-box {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  border: 1px solid #666666;
+  border-radius: 50%; }
+  .page-11 .rotary-box .rotary {
+    background: url("../images/rotary-bg.png") no-repeat center center;
+    background-size: contain;
+    width: 320px;
+    height: 320px;
+    margin: 15px auto;
+    text-align: center;
+    line-height: 398.5px; }
+  .page-11 .rotary-box .lottery-star {
+    line-height: 90px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    display: inline-block; }
+    .page-11 .rotary-box .lottery-star img {
+      width: 90px;
+      margin-top: -17.7px; }
+.page-11 .desc-box {
+  margin: 30px;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.8;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: justify; }
+  .page-11 .desc-box .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; }
+
+.alert-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; }
+  .alert-box .scale-box {
+    padding: 0 30px; }
+  .alert-box .close {
+    float: right;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #fafafa;
+    z-index: 9;
+    position: absolute;
+    margin-left: 325px;
+    margin-top: -15px; }
+  .alert-box .alert {
+    display: none;
+    background: url("../images/prize-bg.png") no-repeat center center;
+    background-size: contain;
+    width: 340px;
+    height: 546.924px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1; }
+    .alert-box .alert .title {
+      height: 76px;
+      width: 100%;
+      margin: 60px auto; }
+    .alert-box .alert .input-box {
+      height: 50px;
+      width: 300px;
+      margin: 0 auto 25px; }
+      .alert-box .alert .input-box label {
+        position: absolute;
+        height: 20px;
+        width: 40px;
+        margin: 14px 0 0 10px; }
+        .alert-box .alert .input-box label.name {
+          background: url("../images/label-name.png") no-repeat center center;
+          background-size: contain; }
+        .alert-box .alert .input-box label.address {
+          background: url("../images/label-address.png") no-repeat center center;
+          background-size: contain; }
+        .alert-box .alert .input-box label.phone {
+          background: url("../images/label-phone.png") no-repeat center center;
+          background-size: contain;
+          width: 80px; }
+      .alert-box .alert .input-box input[type='text'] {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: none;
+        border: 1px #666 dashed;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 16px; }
+        .alert-box .alert .input-box input[type='text']:focus {
+          outline: none; }
+        .alert-box .alert .input-box input[type='text'].name, .alert-box .alert .input-box input[type='text'].address {
+          padding-left: 60px; }
+        .alert-box .alert .input-box input[type='text'].phone {
+          padding-left: 100px; }
+    .alert-box .alert .tip-message {
+      background: url("../images/label-message.png") no-repeat center center;
+      background-size: contain;
+      height: 20px;
+      width: 100%; }
+    .alert-box .alert .submit {
+      height: 50px;
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      margin-left: -75px;
+      border: 1px solid #000;
+      background: none;
+      border-radius: 10px;
+      display: block;
+      bottom: 80px; }
+      .alert-box .alert .submit .submit-desc {
+        background: url("../images/submit-desc.png") no-repeat center center;
+        background-size: contain;
+        width: 100%;
+        height: 20px;
+        display: inline-block;
+        margin-top: 14px; }
+    .alert-box .alert .desc {
+      text-align: center;
+      padding: 0 10px;
+      margin: 150px 0;
+      font-size: 20px;
+      line-height: 1.6; }
+  .alert-box .alert-1 .title {
+    background: url("../images/prize-1-desc.png") no-repeat center center;
+    background-size: contain;
+    margin: 10px 0 40px; }
+  .alert-box .alert-1 .submit {
+    bottom: 30px; }
+  .alert-box .alert-2 .title {
+    background: url("../images/prize-2-desc.png") no-repeat center center;
+    background-size: contain; }
+  .alert-box .alert-3 .title {
+    background: url("../images/prize-3-desc.png") no-repeat center center;
+    background-size: contain; }
+  .alert-box .alert-4 .title {
+    background: url("../images/prize-4-desc.png") no-repeat center center;
+    background-size: contain;
+    margin: 60px auto; }
+  .alert-box .alert-5 .title {
+    background: url("../images/prize-5-desc.png") no-repeat center center;
+    background-size: contain;
+    margin: 180px auto; }
+
+/* cloudMove */
+@keyframes cloudMove1 {
+  0% {
+    margin-top: 0.7rem; }
+  50% {
+    margin-top: 1.3rem; }
+  100% {
+    margin-top: 0.7rem; } }
+@-moz-keyframes cloudMove1 {
+  0% {
+    margin-top: 0.7rem; }
+  50% {
+    margin-top: 1.3rem; }
+  100% {
+    margin-top: 0.7rem; } }
+@-webkit-keyframes cloudMove1 {
+  0% {
+    margin-top: 0.7rem; }
+  50% {
+    margin-top: 1.3rem; }
+  100% {
+    margin-top: 0.7rem; } }
+@-o-keyframes cloudMove1 {
+  0% {
+    margin-top: 0.7rem; }
+  50% {
+    margin-top: 1.3rem; }
+  100% {
+    margin-top: 0.7rem; } }
+/* cloudMove2 */
+@keyframes cloudMove2 {
+  0% {
+    margin-top: 17.7rem; }
+  50% {
+    margin-top: 18.3rem; }
+  100% {
+    margin-top: 17.7rem; } }
+@-moz-keyframes cloudMove2 {
+  0% {
+    margin-top: 17.7rem; }
+  50% {
+    margin-top: 18.3rem; }
+  100% {
+    margin-top: 17.7rem; } }
+@-webkit-keyframes cloudMove2 {
+  0% {
+    margin-top: 17.7rem; }
+  50% {
+    margin-top: 18.3rem; }
+  100% {
+    margin-top: 17.7rem; } }
+@-o-keyframes cloudMove2 {
+  0% {
+    margin-top: 17.7rem; }
+  50% {
+    margin-top: 18.3rem; }
+  100% {
+    margin-top: 17.7rem; } }
+/* circleDraw */
+/* Using the data attributes for the animation selectors. */
+/* Base settings for all animated elements */
+div[data-anim~=base] {
+  -webkit-animation-iteration-count: 1;
+  /* Only run once */
+  -webkit-animation-fill-mode: forwards;
+  /* Hold the last keyframe */
+  -webkit-animation-timing-function: linear;
+  /* Linear animation */ }
+
+.wrapper[data-anim~=wrapper] {
+  -webkit-animation-duration: 0.01s;
+  /* Complete keyframes asap */
+  -webkit-animation-delay: 1.5s;
+  /* Wait half of the animation */
+  -webkit-animation-name: close-wrapper;
+  /* Keyframes name */ }
+
+.circle[data-anim~=left] {
+  -webkit-animation-duration: 3s;
+  /* Full animation time */
+  -webkit-animation-name: left-spin; }
+
+.circle[data-anim~=right] {
+  -webkit-animation-duration: 1.5s;
+  /* Half animation time */
+  -webkit-animation-name: right-spin; }
+
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+@-webkit-keyframes right-spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(180deg); } }
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@-webkit-keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+/* Set the wrapper clip to auto, effectively removing the clip */
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto); } }
